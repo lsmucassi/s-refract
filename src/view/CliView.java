@@ -5,9 +5,12 @@ import controller.Game;
 import model.Enemies;
 import model.Hereos;
 
+import java.util.Scanner;
+
 public class CliView {
 
     boolean isGameOn = true;
+    Scanner in = new Scanner(System.in);
 
     public CliView() {
 

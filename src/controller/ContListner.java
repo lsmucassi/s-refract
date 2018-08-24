@@ -62,7 +62,7 @@ public class ContListner {
         }
     }
 
-    public void checkWin(Hereos hero, Enemies enemy) {
+    public void checkWin(Hereos hero, Enemies enemy, EIOException err) {
 
         if (hero.getHeroHealth() < 1) {
             err.checkMovErr("d");
@@ -76,7 +76,7 @@ public class ContListner {
             hero.getLevel()++;
             hero.getStats();
             System.out.println("------------------------------------------------------------------------------------");
-//            playExit();
+            playExit(err);
         }
     }
 }
