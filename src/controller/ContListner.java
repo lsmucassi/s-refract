@@ -1,13 +1,18 @@
 package controller;
 
+import ErrException.EIOException;
 import model.Enemies;
 import model.Hereos;
 import view.CliView;
+
+import java.util.Scanner;
 
 public class ContListner {
 
     CliView _cli;
     Hereos _hero;
+
+    Scanner in = new Scanner(System.in);
 
     public ContListner(CliView cli, Hereos hero) {
         this._cli = cli;
@@ -39,7 +44,7 @@ public class ContListner {
 
     }
 
-    public void playExit() {
+    public void playExit(EIOException err) {
         System.out.println("\t \033[34m - A : Play again \033[0m");
         System.out.println("\t \033[31m - X : Exit \033[0m");
         System.out.println("------------------------------------------------------------------------------------");
@@ -49,18 +54,18 @@ public class ContListner {
         String nextIn = in.nextLine();
 
         if (nextIn.equals("A") || nextIn.equals("a")) {
-            checkErr.checkMovErr(nextIn);
+            err.checkMovErr(nextIn);
         } else if (nextIn.equals("X") || nextIn.equals("x")) {
-            checkErr.checkMovErr(nextIn);
+            err.checkMovErr(nextIn);
         } else {
-            checkErr.checkMovErr(nextIn);
+            err.checkMovErr(nextIn);
         }
     }
 
     public void checkWin(Hereos hero, Enemies enemy) {
 
         if (hero.getHeroHealth() < 1) {
-            checkErr.checkMovErr("d");
+            err.checkMovErr("d");
             playExit();
         } else if (enemy.getEnemyHealth() < 1) {
             System.out.println("------------------------------------------------------------------------------------");
@@ -71,7 +76,7 @@ public class ContListner {
             hero.getLevel()++;
             hero.getStats();
             System.out.println("------------------------------------------------------------------------------------");
-            playExit();
+//            playExit();
         }
     }
 }
