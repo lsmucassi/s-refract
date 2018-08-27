@@ -12,7 +12,9 @@ public class Enemies extends Characters {
     String[] enemies = {"Wolfy", "Spirit Bear", "Slimy Swampy", "Giyante Drago"};
 
     public String getEnyName() {
-        return enemies[new Random().nextInt(enemies.length)];
+
+        String eny = enemies[new Random().nextInt(enemies.length)];
+        return eny;
     }
 
 }

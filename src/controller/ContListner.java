@@ -9,9 +9,9 @@ import java.util.Scanner;
 
 public class ContListner {
 
-    CliView _cli;
-    Hereos _hero;
-    Enemies enemy;
+    CliView _cli ;
+    Hereos _hero ;
+    Enemies enemy = new Enemies();
     Game game = new Game();
 
     String eny = enemy.getEnyName();
