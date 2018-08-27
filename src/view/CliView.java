@@ -81,7 +81,7 @@ public class CliView {
         while (isGameOn) {
             if (game.getStage() == 0) {
                 STAGE:
-                while (enemy.getEnyHealth() > 0) {
+                while (enemy.getLife() > 0) {
                     checkCom();
 
                     System.out.println("------------------------------------------------------------------------------------");

@@ -64,10 +64,10 @@ public class ContListner {
 
     public void checkWin(Hereos hero, Enemies enemy, EIOException err) {
 
-        if (hero.getHeroHealth() < 1) {
+        if (hero.getLife() < 1) {
             err.checkMovErr("d");
             playExit();
-        } else if (enemy.getEnemyHealth() < 1) {
+        } else if (enemy.getLife() < 1) {
             System.out.println("------------------------------------------------------------------------------------");
             System.out.println("\t\033[32m#########################################################################\033[0m");
             System.out.println("\t\033[33m$ You defeated \033[0m" + eny +
