@@ -19,4 +19,5 @@ public class Hereos extends Characters{
     public int getY() {
         return Y;
     }
+
 }

@@ -53,13 +53,6 @@ public class CliView {
         System.out.println("------------------------------------------------------------------------------------");
     }
 
-    public void stats() {
-        System.out.println("\t\033[34m $ You are at stage: \033[0m" /* + stage*/);
-        System.out.println("\t\033[34m $ You are level: \033[0m"  /* + level*/);
-        System.out.println("\t\033[34m $ You have hit point: \033[0m" /* + hitPoint + "\033[34m XP\033[0m" */);
-        System.out.println("\t\033[34m $ Your health is : \033[0m" /* + heroHealth */);
-        System.out.println("\t\033[34m $ Your experience is \033[0m" + /* exp + */ "\033[34m XP\033[0m");
-    }
 
     public void checkCom() {
 
@@ -74,12 +67,12 @@ public class CliView {
         System.out.println("\t\033[31m- 6 : Exit\033[0m");
     }
 
-    public void gameCli(Game game, Hereos hero, Enemies enemy, ContListner cont) {
+    public void gameCli(/*Game game, Hereos hero, */Enemies enemy /*ContListner cont*/ ) {
 
         startSc();
 
         while (isGameOn) {
-            if (game.getStage() == 0) {
+//            if (game.getStage() == 0) {
                 STAGE:
                 while (enemy.getLife() > 0) {
                     checkCom();
@@ -92,7 +85,7 @@ public class CliView {
 
                     if (nextIn.equals("0")) {
 
-                        cont.doFight();
+//                        cont.doFight();
 /* check here
                         int damageMade = cont.getDamageMade();
                         int takenDamage = cont.getTakenDamage();
@@ -170,4 +163,4 @@ public class CliView {
             }
         }
     }
-}
+//}

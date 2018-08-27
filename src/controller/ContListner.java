@@ -11,7 +11,10 @@ public class ContListner {
 
     CliView _cli;
     Hereos _hero;
+    Enemies enemy;
+    Game game = new Game();
 
+    String eny = enemy.getEnyName();
     Scanner in = new Scanner(System.in);
 
     public ContListner(CliView cli, Hereos hero) {
@@ -21,7 +24,16 @@ public class ContListner {
     }
 
     public void startGame() {
-        _cli.gameCli();
+        _cli.gameCli(enemy);
+    }
+
+    //players stats
+    public void getStats() {
+//      System.out.println("\t\033[34m $ You are at stage: \033[0m" + _hero.getStage());
+        System.out.println("\t\033[34m $ You are level: \033[0m"   + _hero.getLevel());
+        System.out.println("\t\033[34m $ You have hit point: \033[0m" + _hero.getHitPoint() + "\033[34m XP\033[0m" );
+        System.out.println("\t\033[34m $ Your health is : \033[0m" + _hero.getLife());
+        System.out.println("\t\033[34m $ Your experience is \033[0m" + _hero.getExp() + "\033[34m XP\033[0m");
     }
 
     public void doFight() {
@@ -66,15 +78,15 @@ public class ContListner {
 
         if (hero.getLife() < 1) {
             err.checkMovErr("d");
-            playExit();
+            playExit(err);
         } else if (enemy.getLife() < 1) {
             System.out.println("------------------------------------------------------------------------------------");
             System.out.println("\t\033[32m#########################################################################\033[0m");
             System.out.println("\t\033[33m$ You defeated \033[0m" + eny +
                     "\033[33m, you can now go to the next level\033[0m ");
             System.out.println("\t\033[32m#########################################################################\n\033[0m");
-            hero.getLevel()++;
-            hero.getStats();
+//            hero.getLevel()++;
+            getStats();
             System.out.println("------------------------------------------------------------------------------------");
             playExit(err);
         }
