@@ -67,7 +67,27 @@ public class CliView {
         System.out.println("\t\033[31m- 6 : Exit\033[0m");
     }
 
-    public void gameCli(/*Game game, Hereos hero, */Enemies enemy /*ContListner cont*/ ) {
+    public void doFight(Hereos _hero) {
+        printMap((1-1)*5+10-(1%2), _hero);
+//        takenDamage = rand.nextInt(enemy.getEnyDamage());
+//        damageMade = rand.nextInt(hero.getAttackDamage());
+//
+//        heroHealth -= takenDamage;
+//        enemyHealth -= damageMade;
+//
+//        if (heroHealth <= 1 && enemyHealth <= 1) {
+//            if (takenDamage < damageMade) {
+//                heroHealth = 1;
+//            } else
+//                enemyHealth = 1;
+//        }
+//
+//        if (heroHealth <= 0) { heroHealth  = 0; }
+//        if (enemyHealth <= 0) { enemyHealth = 0; }
+
+    }
+
+    public void gameCli(/*Game game, Hereos hero, */Enemies enemy, Hereos hero ) {
 
         startSc();
 
@@ -85,7 +105,7 @@ public class CliView {
 
                     if (nextIn.equals("0")) {
 
-//                        cont.doFight();
+                       doFight(hero);
 /* check here
                         int damageMade = cont.getDamageMade();
                         int takenDamage = cont.getTakenDamage();

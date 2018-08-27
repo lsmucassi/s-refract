@@ -24,7 +24,7 @@ public class ContListner {
     }
 
     public void startGame() {
-        _cli.gameCli(enemy);
+        _cli.gameCli(enemy, _hero);
     }
 
     //players stats
@@ -36,25 +36,7 @@ public class ContListner {
         System.out.println("\t\033[34m $ Your experience is \033[0m" + _hero.getExp() + "\033[34m XP\033[0m");
     }
 
-    public void doFight() {
-        _cli.printMap((1-1)*5+10-(1%2), _hero);
-//        takenDamage = rand.nextInt(enemy.getEnyDamage());
-//        damageMade = rand.nextInt(hero.getAttackDamage());
-//
-//        heroHealth -= takenDamage;
-//        enemyHealth -= damageMade;
-//
-//        if (heroHealth <= 1 && enemyHealth <= 1) {
-//            if (takenDamage < damageMade) {
-//                heroHealth = 1;
-//            } else
-//                enemyHealth = 1;
-//        }
-//
-//        if (heroHealth <= 0) { heroHealth  = 0; }
-//        if (enemyHealth <= 0) { enemyHealth = 0; }
 
-    }
 
     public void playExit(EIOException err) {
         System.out.println("\t \033[34m - A : Play again \033[0m");

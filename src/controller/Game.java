@@ -11,4 +11,5 @@ public class Game {
     public int getStage() {
         return stage;
     }
+
 }
