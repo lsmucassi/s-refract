@@ -36,8 +36,6 @@ public class ContListner {
         System.out.println("\t\033[34m $ Your experience is \033[0m" + _hero.getExp() + "\033[34m XP\033[0m");
     }
 
-
-
     public void playExit(EIOException err) {
         System.out.println("\t \033[34m - A : Play again \033[0m");
         System.out.println("\t \033[31m - X : Exit \033[0m");

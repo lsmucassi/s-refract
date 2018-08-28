@@ -51,21 +51,38 @@ public class Characters {
 
     //get players
     public void loadPlayer() {
-        String fileName = "/goinfre/lmucassi/Documents/s-refract/src/players.txt";
+        String fileName = "src/players.txt";
         File file = new File(fileName);
 
-       try {
+        try {
             Scanner inFile = new Scanner(file);
             while (inFile.hasNext()) {
                 String line = inFile.next();
                 System.out.println( line + " ->");
             }
-           System.out.println("\n");
+            System.out.println("\n");
             inFile.close();
 
-       } catch (FileNotFoundException err) {
+        } catch (FileNotFoundException err) {
             System.out.println("Err: Players file not found [ error loading heroes ]");
             err.printStackTrace();
+        }
+
+        Scanner creatCha = new Scanner(System.in);
+        int doneCreat = 0;
+
+        System.out.println("\t \033[34m - C : Would you like to create a hero \033[0m");
+        System.out.println("\t \033[31m - S : Choose from a list \033[0m");
+        System.out.println("------------------------------------------------------------------------------------");
+        System.out.println("\033[32m $ Enter command \033[0m");
+        System.out.print("\033[32m $  \033[0m");
+
+        String nextCha = creatCha.nextLine();
+        if (nextCha == "C") {
+            while (doneCreat == 0) {
+                //enter Hero characteristics
+            }
+        } else {
         }
 
 //
