@@ -1,9 +1,7 @@
 package view;
 
-import controller.ContListner;
-import controller.Game;
 import model.Enemies;
-import model.Hereos;
+import model.Heroes;
 
 import java.util.Scanner;
 
@@ -16,7 +14,7 @@ public class CliView {
 
     }
 
-    public void printMap(int mapSize, Hereos hero) {
+    public void printMap(int mapSize, Heroes hero) {
 //        clearScreen();
         hero.setX(mapSize / 2);
         hero.setY(mapSize / 2);
@@ -33,7 +31,7 @@ public class CliView {
     }
 
     public void startSc() {
-        System.out.println("  Welcome to the adventure of hereos");
+        System.out.println("  Welcome to the adventure of heroes");
         System.out.println("  You are a warrior in a land of the unknown, the king called you and gave you a task");
         System.out.println("  Over night the King's daughter, the princes was kidnapped by The Mighty Giyante Drago");
         System.out.println("  As a warrior you the King trusts that you will save his daughter ");
@@ -67,7 +65,7 @@ public class CliView {
         System.out.println("\t\033[31m- 6 : Exit\033[0m");
     }
 
-    public void doFight(Hereos _hero) {
+    public void doFight(Heroes _hero) {
         printMap((1-1)*5+10-(1%2), _hero);
 //        takenDamage = rand.nextInt(enemy.getEnyDamage());
 //        damageMade = rand.nextInt(hero.getAttackDamage());
@@ -87,7 +85,7 @@ public class CliView {
 
     }
 
-    public void gameCli(/*Game game, Hereos hero, */Enemies enemy, Hereos hero ) {
+    public void gameCli(/*Game game, Hereos hero, */Enemies enemy, Heroes hero ) {
 
         startSc();
 

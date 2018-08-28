@@ -1,13 +1,14 @@
+
 import controller.ContListner;
-import model.Hereos;
+import model.Heroes;
 import view.CliView;
+
 
 public class Main {
 
     public static void main(String[] args) {
         CliView cli = new CliView();
-        Hereos hero = new Hereos();
-
+        Heroes hero = new Heroes();
         ContListner contListner =  new ContListner(cli, hero);
 
         contListner.startGame();

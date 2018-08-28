@@ -1,6 +1,6 @@
 package model;
 
-public class Hereos extends Characters{
+public class Heroes extends Characters{
 
     int X, Y;
 

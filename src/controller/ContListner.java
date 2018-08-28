@@ -2,7 +2,7 @@ package controller;
 
 import ErrException.EIOException;
 import model.Enemies;
-import model.Hereos;
+import model.Heroes;
 import view.CliView;
 
 import java.util.Scanner;
@@ -10,20 +10,20 @@ import java.util.Scanner;
 public class ContListner {
 
     CliView _cli ;
-    Hereos _hero ;
+    Heroes _hero ;
     Enemies enemy = new Enemies();
-    Game game = new Game();
 
     String eny = enemy.getEnyName();
     Scanner in = new Scanner(System.in);
 
-    public ContListner(CliView cli, Hereos hero) {
+    public ContListner(CliView cli, Heroes hero) {
         this._cli = cli;
         this._hero = hero;
 
     }
 
     public void startGame() {
+        _hero.loadPlayer();
         _cli.gameCli(enemy, _hero);
     }
 
@@ -56,7 +56,7 @@ public class ContListner {
         }
     }
 
-    public void checkWin(Hereos hero, Enemies enemy, EIOException err) {
+    public void checkWin(Heroes hero, Enemies enemy, EIOException err) {
 
         if (hero.getLife() < 1) {
             err.checkMovErr("d");

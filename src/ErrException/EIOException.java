@@ -11,7 +11,7 @@ public class EIOException extends java.io.IOException {
     public void checkMovErr(String err) {
 
         if (err == "A") {
-            System.out.println("Let's P;ayAgain");
+            System.out.println("Let's Play Again");
         } else if (err == "X") {
             System.out.println("-----------------------------------------------------------------------------------");
             System.out.println("\t \033[31mExited \033[0m");
