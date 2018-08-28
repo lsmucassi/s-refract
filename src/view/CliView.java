@@ -31,15 +31,18 @@ public class CliView {
     }
 
     public void startSc() {
+        System.out.println("\t\033[32m#########################################################################\033[0m");
         System.out.println("  Welcome to the adventure of heroes");
         System.out.println("  You are a warrior in a land of the unknown, the king called you and gave you a task");
         System.out.println("  Over night the King's daughter, the princes was kidnapped by The Mighty Giyante Drago");
         System.out.println("  As a warrior you the King trusts that you will save his daughter ");
         System.out.println("and if you do the king will make you a knight");
+        System.out.println("\t\033[32m#########################################################################\033[0m");
+        System.out.println("\n");
         System.out.println("------------------------------------------------------------------------------------");
         System.out.println("\t#\tLet's Begin \t#");
-
         System.out.println("------------------------------------------------------------------------------------");
+        System.out.println("\n");
         System.out.println("\t\033[33m $ This is the beginning of your journey to saving the princess\033[0m");
         System.out.println("\t\033[34m \033[34m$ You are now faced with \033[0m" /* + eny */);
     }
