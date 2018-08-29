@@ -7,15 +7,43 @@ import java.util.Scanner;
 
 public class Characters {
 
-    public static int iter;
+//    public static int iter;
     int life = 100;
     int hitPoint = 0;
     int level = 0;
     int exp = 0;
+    int attack = 0;
+    int def = 0;
+    String weap1 = "";
+    String weap2 = "";
+//    String[] collWeap;
+    String name = "";
+    String type = "";
+    String clan = "";
 
     public Characters() {}
 
     //set
+    public void setName(String nm) {
+        this.name = nm;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public void setClan(String clan) {
+        this.clan = clan;
+    }
+
+    public void setWeap1(String weap1) {
+        this.weap1 = weap1;
+    }
+
+    public void setWeap2(String weap2) {
+        this.weap2 = weap2;
+    }
+
     public void setLife(int lf) {
         this.life = lf;
     }
@@ -31,6 +59,16 @@ public class Characters {
     public void setExp(int expr) {
         this.exp = expr;
     }
+
+    public void setAttack(int att) {
+        this.attack = att;
+    }
+
+    public void setDef(int df) {
+        this.def = df;
+    }
+
+
 
     //get
     public int getLife() {
@@ -58,7 +96,8 @@ public class Characters {
             Scanner inFile = new Scanner(file);
             while (inFile.hasNext()) {
                 String line = inFile.next();
-                System.out.println( line + " ->");
+                //System.out.println( line + " ->");
+
             }
             System.out.println("\n");
             inFile.close();
