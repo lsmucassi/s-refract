@@ -74,6 +74,23 @@ public class Characters {
     public String getName() {
         return this.name;
     }
+
+    public String getType() {
+       return this.type;
+    }
+
+    public String getClan() {
+        return this.clan;
+    }
+
+    public String getWeap1() {
+        return this.weap1;
+    }
+
+    public String getWeap2() {
+        return this.weap2;
+    }
+
     public int getLife() {
         return this.life;
     }

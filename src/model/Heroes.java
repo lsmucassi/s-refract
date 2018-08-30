@@ -25,13 +25,20 @@ public class Heroes extends Characters{
         return Y;
     }
 
-
     private Heroes getHero(String details) {
         Heroes hero = new Heroes();
         String[] detail = details.split(",");
 
         hero.setName(detail[0]);
-
+        hero.setType(detail[1]);
+        hero.setLevel(Integer.parseInt((detail[2])));
+        hero.setExp(Integer.parseInt((detail[3])));
+        hero.setClan(detail[4]);
+        hero.setAttack(Integer.parseInt((detail[5])));
+        hero.setDef(Integer.parseInt((detail[5])));
+        hero.setWeap1(detail[6]);
+        hero.setWeap2(detail[7]);
+        hero.setHitPoint(Integer.parseInt(detail[8]));
         return (hero);
     }
 
@@ -42,10 +49,11 @@ public class Heroes extends Characters{
          while (ls.hasNext()) {
             players.add(getHero(ls.next()));
         }
-        hero = players.get(3);
+//        hero = players.get(3);
         for (Heroes h:
              players) {
-            System.out.println(h.getName());
+            System.out.println(h.getName() + h.getType() + h.getLevel() +
+                    h.getExp() + h.getName());
         }
     }
 
@@ -62,7 +70,6 @@ public class Heroes extends Characters{
 //            while (inFile.hasNext()) {
 //                String line = inFile.next();
 //                  //System.out.println( line + " ->");
-//
 //            }
 
             System.out.println("\n");
@@ -90,7 +97,6 @@ public class Heroes extends Characters{
         } else {
         }
 
-//
 //        try {
 //            String fileName = "/goinfre/lmucassi/Documents/s-refract/src/players.txtplayers.txt";
 //            FileInputStream fstream = new FileInputStream(fileName);
@@ -139,5 +145,4 @@ public class Heroes extends Characters{
 //            return ;
 //        }
     }
-
 }
