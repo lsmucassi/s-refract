@@ -107,4 +107,12 @@ public class Characters {
         return this.exp;
     }
 
+    public int getAttack() {
+        return this.attack;
+    }
+
+    public int getDef() {
+        return this.def;
+    }
+
 }

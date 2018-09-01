@@ -1,7 +1,5 @@
 package model;
 
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -34,8 +32,8 @@ public class Heroes extends Characters{
         hero.setLevel(Integer.parseInt((detail[2])));
         hero.setExp(Integer.parseInt((detail[3])));
         hero.setClan(detail[4]);
-//        hero.setAttack(Integer.parseInt((detail[5])));
-//        hero.setDef(Integer.parseInt((detail[5])));
+        hero.setAttack(Integer.parseInt((detail[5])));
+        hero.setDef(Integer.parseInt((detail[5])));
 //        hero.setWeap1(detail[6]);
 //        hero.setWeap2(detail[7]);
 //        hero.setHitPoint(Integer.parseInt(detail[8]));
@@ -52,9 +50,16 @@ public class Heroes extends Characters{
 //        hero = players.get(3);
         for (Heroes h:
                 players) {
-            System.out.println(h.getName() + " " + h.getType() + " " +
-                    h.getLevel() + " " + h.getExp() + " " + h.getClan() +
-                    "" );
+            System.out.println(h.getName()
+                    + " " + h.getType()
+                    + " " + h.getLevel()
+                    + " " + h.getExp()
+                    + " " + h.getClan()
+                    + " " + h.getAttack()
+                    + " " + h.getDef()
+                    + " " + h.getWeap1()
+                    + " " + h.getWeap2()
+                    + " " + h.getHitPoint());
         }
     }
 }
