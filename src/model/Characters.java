@@ -11,14 +11,14 @@ public class Characters {
 
 //    public static int iter;
     int life = 100;
-    int hitPoint = 0;
+    int hitPoint = 10;
     int level = 0;
     int exp = 0;
     int attack = 0;
     int def = 0;
     String weap1 = "";
     String weap2 = "";
-    String[][] fileData;
+//    String[][] fileData;
     String name = "";
     String type = "";
     String clan = "";

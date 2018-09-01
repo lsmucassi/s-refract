@@ -34,9 +34,9 @@ public class Heroes extends Characters{
         hero.setClan(detail[4]);
         hero.setAttack(Integer.parseInt((detail[5])));
         hero.setDef(Integer.parseInt((detail[5])));
-//        hero.setWeap1(detail[6]);
-//        hero.setWeap2(detail[7]);
-//        hero.setHitPoint(Integer.parseInt(detail[8]));
+        hero.setWeap1(detail[6]);
+        hero.setWeap2(detail[7]);
+        hero.setHitPoint(Integer.parseInt(detail[8]));
         return (hero);
     }
 
@@ -51,15 +51,15 @@ public class Heroes extends Characters{
         for (Heroes h:
                 players) {
             System.out.println(h.getName()
-                    + " " + h.getType()
-                    + " " + h.getLevel()
-                    + " " + h.getExp()
-                    + " " + h.getClan()
-                    + " " + h.getAttack()
-                    + " " + h.getDef()
-                    + " " + h.getWeap1()
-                    + " " + h.getWeap2()
-                    + " " + h.getHitPoint());
+                    + " - " + h.getType()
+                    + " - " + h.getLevel()
+                    + " - " + h.getExp()
+                    + " - " + h.getClan()
+                    + " - " + h.getAttack()
+                    + " - " + h.getDef()
+                    + " - " + h.getWeap1()
+                    + " - " + h.getWeap2()
+                    + " - " + h.getHitPoint());
         }
     }
 }
