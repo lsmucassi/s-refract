@@ -12,6 +12,7 @@ public class ContListner {
     CliView _cli ;
     Heroes _hero ;
     Enemies enemy = new Enemies();
+    ContProc cont = new ContProc();
 
     String eny = enemy.getEnyName();
     Scanner in = new Scanner(System.in);
@@ -23,7 +24,7 @@ public class ContListner {
     }
 
     public void startGame() {
-        _hero.loadPlayer();
+        cont.loadPlayer(_hero);
         _cli.gameCli(enemy, _hero);
     }
 
