@@ -51,15 +51,8 @@ public class Heroes extends Characters{
         for (Heroes h:
                 players) {
             System.out.println(h.getName()
-                    + " - " + h.getType()
-                    + " - " + h.getLevel()
-                    + " - " + h.getExp()
-                    + " - " + h.getClan()
-                    + " - " + h.getAttack()
-                    + " - " + h.getDef()
-                    + " - " + h.getWeap1()
-                    + " - " + h.getWeap2()
-                    + " - " + h.getHitPoint());
+                    + " - The " + h.getType()
+                    + " - level " + h.getLevel());
         }
     }
 }

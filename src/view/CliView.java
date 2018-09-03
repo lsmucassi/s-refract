@@ -22,9 +22,9 @@ public class CliView {
         for (int y = 0; y < mapSize; y++) {
             for (int x = 0; x < mapSize; x++) {
                 if (hero.getX() == x && hero.getY() == y)
-                    System.out.print("&");
+                    System.out.print(" &");
                 else
-                    System.out.print(".");
+                    System.out.print(" .");
             }
             System.out.println();
         }
@@ -69,7 +69,7 @@ public class CliView {
     }
 
     public void doFight(Heroes _hero) {
-        printMap((1-1)*5+10-(1%2), _hero);
+        printMap((2-1)*5+10-(2%2), _hero);
 //        takenDamage = rand.nextInt(enemy.getEnyDamage());
 //        damageMade = rand.nextInt(hero.getAttackDamage());
 //
