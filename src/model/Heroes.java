@@ -48,18 +48,10 @@ public class Heroes extends Characters{
             players.add(getHero(ls.next()));
         }
 //        hero = players.get(3);
-        for (Heroes h:
-                players) {
-            System.out.println(h.getName()
-                    + " - " + h.getType()
-                    + " - " + h.getLevel()
-                    + " - " + h.getExp()
-                    + " - " + h.getClan()
-                    + " - " + h.getAttack()
-                    + " - " + h.getDef()
-                    + " - " + h.getWeap1()
-                    + " - " + h.getWeap2()
-                    + " - " + h.getHitPoint());
+        for (Heroes h: players) {
+            System.out.println((players.indexOf(h) + 1) + " " + h.getName()
+                    + " - The " + h.getType()
+                    + " - level " + h.getLevel());
         }
     }
 }

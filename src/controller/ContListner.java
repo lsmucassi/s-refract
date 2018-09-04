@@ -23,9 +23,10 @@ public class ContListner {
 
     }
 
-    public void startGame() {
+    public void playGame() {
         cont.loadPlayer(_hero);
         _cli.gameCli(enemy, _hero);
+        _cli.endSc();
     }
 
     //players stats

@@ -11,6 +11,6 @@ public class Main {
         Heroes hero = new Heroes();
         ContListner contListner =  new ContListner(cli, hero);
 
-        contListner.startGame();
+        contListner.playGame();
     }
 }
