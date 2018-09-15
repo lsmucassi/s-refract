@@ -1,0 +1,6 @@
+Sam,Traveller,2,1000,Short sword,Ebonwood armor
+Marcus,Runner,0,0,Arikara,5,electric-shoes,electric-canons
+Dante,Trickster,2,2450,Cado,10,staff-of-magnus,invisible-gown,0
+X-Byte,Geek,3,4800,Chippewa,15,laser-sword,electric-armor,0
+Roy,Slayer,3,4800,viking,15,Ulfberht-sword,metal-shield,0
+Arthur,King,3,4800,excalibar,15,excalibar,strong-Armor,0
