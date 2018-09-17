@@ -1,4 +1,3 @@
-com/lmucassi/app/controller/CliController.class
 com/lmucassi/app/controller/Game.class
 com/lmucassi/app/model/GuiComponent.class
 com/lmucassi/app/view/FightOrFlight.class
