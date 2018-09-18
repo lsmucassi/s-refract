@@ -4,13 +4,13 @@ import com.lmucassi.app.ErrException.ErrException;
 
 import java.util.Scanner;
 
-public class FightOrFlight {
+public class Battle {
     private static Scanner scanner = new Scanner(System.in);
 
-    public FightOrFlight() {
+    public Battle() {
     }
 
-    public int fightOrFlight() throws ErrException {
+    public int battle() throws ErrException {
         int choice = 0;
         int cc = 1;
         System.out.println("\033[32mYou have come across an enemy, what would you like to do?\033[0m");

@@ -87,7 +87,7 @@ public class CliView {
         System.out.println("\033[32m $ Name: ".concat(hero.getName()));
         System.out.println("\033[32m $ Class: ".concat(hero.getHeroClass()));
         System.out.println("\033[32m $ Level: ".concat(Integer.toString(hero.getLevel())));
-        System.out.println("\033[32m $ Experience: ".concat(Integer.toString(hero.getExperience()).concat(" XP")));
+        System.out.println("\033[32m $ Experience: ".concat(Integer.toString(hero.getExp()).concat(" XP")));
         System.out.println("\033[32m $ Attack: ".concat(Integer.toString(hero.getAttack())));
         System.out.println("\033[32m $ Defence: ".concat(Integer.toString(hero.getDefense())));
         System.out.println("\033[32m $ Weapon: ".concat(hero.getWeapon()));
@@ -121,7 +121,7 @@ public class CliView {
         System.out.println("\t\033[31mGAME OVER!!!\033[0m");
         System.out.println("\t\033[34m-Hero: \033[0m".concat(hero.getName()
                 .concat("\t\033[34m- Killed by: \033[0m").concat(enemy.getName())));
-        System.out.println("\t\033[34m-XP: \033[0m".concat(Integer.toString(hero.getExperience())
+        System.out.println("\t\033[34m-XP: \033[0m".concat(Integer.toString(hero.getExp())
                 .concat("\t\033[34m- Level: \033[0m").concat(Integer.toString(hero.getLevel()))));
     }
 
@@ -143,6 +143,7 @@ public class CliView {
         Enemy e;
         System.out.print(" \033[34mLife: \033[0m".concat(Integer.toString(hero.getHitPoints()).concat("\t\t")));
         System.out.println(" \033[34mLevel: \033[0m".concat(Integer.toString(hero.getLevel())));
+        System.out.println(" \033[34mLevel: \033[0m".concat(Integer.toString(hero.getExp())));
         for (int y = 0; y < mapSize; y++) {
             for (int x = 0; x < mapSize; x++) {
                 e = getEnemy(x, y, enemies);

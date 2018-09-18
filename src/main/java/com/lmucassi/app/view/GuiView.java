@@ -130,7 +130,7 @@ public class GuiView extends JFrame {
         detailModel.removeAllElements();
         detailModel.addElement(("Class: ").concat(hero.getHeroClass()));
         detailModel.addElement("Level: ".concat(Integer.toString(hero.getLevel())));
-        detailModel.addElement("Experience: ".concat(Integer.toString(hero.getExperience()).concat(" XP")));
+        detailModel.addElement("Experience: ".concat(Integer.toString(hero.getExp()).concat(" XP")));
         detailModel.addElement("Weapon: ".concat(hero.getWeapon()));
         detailModel.addElement("Armor: ".concat(hero.getArmor()));
     }
@@ -153,7 +153,7 @@ public class GuiView extends JFrame {
         component.getLifeLabel().setBounds(20, 50, 150, 30);
         component.setLevelLabel(new JLabel("Level: ".concat(Integer.toString(hero.getLevel()))));
         component.getLevelLabel().setBounds(20, 80, 150, 30);
-        component.setXpLabel(new JLabel("Experience: ".concat(Integer.toString(hero.getExperience()).concat(" XP"))));
+        component.setXpLabel(new JLabel("Experience: ".concat(Integer.toString(hero.getExp()).concat(" XP"))));
         component.getXpLabel().setBounds(20, 110, 150, 30);
 
         component.setLocationLabel(new JLabel("Location: ".concat(Integer.toString(hero.getX()))

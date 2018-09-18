@@ -10,7 +10,8 @@ import javax.validation.constraints.NotNull;
 public class Hero extends Character{
     @NotNull
     private String heroClass;
+    public int prevDir;
+    private int exp;
     private int level = 1;
-    private int experience;
-    public int prevDirection;
+
 }

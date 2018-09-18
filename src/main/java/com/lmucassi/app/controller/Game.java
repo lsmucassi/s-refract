@@ -38,7 +38,7 @@ public class Game implements IModes {
     }
 
     public Hero initGame() throws ErrException {
-        boolean parsed = true;
+        boolean parse = true;
         if (!this.gameInPlay) {
             if (consoleView.getChoice().equals("1")) createHero();
             else if (consoleView.getChoice().equals("2")) {
@@ -49,9 +49,9 @@ public class Game implements IModes {
                 try {
                     hero = this.heroes_.get(Integer.parseInt(reader.nextLine()) - 1);
                 } catch (Exception ex) {
-                    parsed = false;
+                    parse = false;
                 }
-                if (!parsed) throw new ErrException("\t \033[31m\nInvalid input.\033[0m");
+                if (!parse) throw new ErrException("\t \033[31m\nInvalid input.\033[0m");
                 hero.setAttack(consoleView.getAttack(hero.getWeapon()));
                 hero.setDefense(consoleView.getDefense(hero.getArmor()));
                 hero.setHitPoints(100);
@@ -98,7 +98,7 @@ public class Game implements IModes {
         name = hero.getName().concat(",");
         _class = hero.getHeroClass().concat(",");
         level = Integer.toString(hero.getLevel()).concat(",");
-        xp = Integer.toString(hero.getExperience()).concat(",");
+        xp = Integer.toString(hero.getExp()).concat(",");
         weap = hero.getWeapon();
         armor = hero.getArmor().concat(",");
 
@@ -110,7 +110,7 @@ public class Game implements IModes {
     public void createHero() {
         hero.setName(consoleView.getHeroName());
         hero.setHeroClass(consoleView.getHeroClass());
-        hero.setExperience(500);
+        hero.setExp(500);
         hero.setWeapon("Dagger");
         hero.setArmor("Ebonwood armor");
         hero.setAttack(consoleView.getAttack(hero.getWeapon()));
@@ -132,7 +132,7 @@ public class Game implements IModes {
                 hero.setName(stats[0]);
                 hero.setHeroClass(stats[1]);
                 hero.setLevel(Integer.parseInt(stats[2]));
-                hero.setExperience(Integer.parseInt(stats[3]));
+                hero.setExp(Integer.parseInt(stats[3]));
                 hero.setWeapon(stats[4]);
                 hero.setArmor(stats[5]);
                 this.heroes_.add(hero);
