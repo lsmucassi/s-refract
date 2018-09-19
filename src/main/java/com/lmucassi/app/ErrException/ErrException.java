@@ -7,7 +7,7 @@ public class ErrException extends Exception {
     public ErrException(String mes) {
         super(mes);
     }
-
+/*
     public void checkMovErr(String err) {
 
         if (err.equals("A") || err.equals("a")) {
@@ -27,8 +27,8 @@ public class ErrException extends Exception {
             System.out.println("\t \033[31;1mInvalid Input [ Command Not Found ] \033[0m");
             System.out.println("-----------------------------------------------------------------------------------");
         }
-    }
-
+    }*/
+/*
     public void checkPlayErr(String err) {
         int e = Integer.parseInt(err);
         if (e > 7 || e < 0) {
@@ -36,5 +36,5 @@ public class ErrException extends Exception {
             System.out.println("\t \033[31;1mInvalid Input [ Command Not Found ] \033[0m");
             System.out.println("-----------------------------------------------------------------------------------");
         }
-    }
+    }*/
 }

@@ -119,10 +119,14 @@ public class CliView {
 
     public void gameOver(Enemy enemy, Hero hero) {
         clearScreen();
-        System.out.println("\t\033[31mGAME OVER!!!\033[0m");
-        System.out.println("\t\033[34m-Hero: \033[0m".concat(hero.getName()
+
+        System.out.println("\t\t\033[31m#########################################################################\033[0m");
+        System.out.println("\t\t\t\t\t\t\t\033[31mGAME OVER!!!\033[0m");
+        System.out.println("\t\t\t\t\t\t\t\033[31m $ Sorry You are dead now\033[0m");
+        System.out.println("\t\t\033[31m#########################################################################\033[0m");
+        System.out.println("\t\n\033[34m- Hero: \033[0m".concat(hero.getName()
                 .concat("\t\033[34m- Killed by: \033[0m").concat(enemy.getName())));
-        System.out.println("\t\033[34m-XP: \033[0m".concat(Integer.toString(hero.getExp())
+        System.out.println("\t\033[34m- XP: \033[0m".concat(Integer.toString(hero.getExp())
                 .concat("\t\033[34m- Level: \033[0m").concat(Integer.toString(hero.getLevel()))));
     }
 
@@ -142,6 +146,7 @@ public class CliView {
 
     public void drawMap(Hero hero, ArrayList<Enemy> enemies, int mapSize) {
         Enemy e;
+        System.out.println("------------------------------------------------------------------------------------");
         System.out.print(" \033[34mLife: \033[0m".concat(Integer.toString(hero.getHitPoints()).concat("\t\t")));
         System.out.println(" \033[34mLevel: \033[0m".concat(Integer.toString(hero.getLevel())));
         for (int y = 0; y < mapSize; y++) {

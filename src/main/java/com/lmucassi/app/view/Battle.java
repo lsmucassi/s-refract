@@ -31,7 +31,7 @@ public class Battle {
         }
 
         if (choice < 1 || choice > 3)
-            throw new ErrException("\033[32mYou can either fight or flee.\033[0m");
+            throw new ErrException("\033[32mYou can either fight, run away or exit game.\033[0m");
         return (choice);
     }
     public void enterCom() {
