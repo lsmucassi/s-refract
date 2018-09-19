@@ -52,27 +52,27 @@ public class GameStats {
     }
 
     private int attackHero() {
-        int defense = this.hero.getDefense();
+        int def = this.hero.getDefense();
         int ret = 0;
-        while (defense > 0) {
-            if (this.enemy.getAttack() > defense) {
-                ret = (defense > 0) ? (this.enemy.getAttack() - defense) : this.enemy.getAttack();
+        while (def > 0) {
+            if (this.enemy.getAttack() > def) {
+                ret = (def > 0) ? (this.enemy.getAttack() - def) : this.enemy.getAttack();
                 break;
             }
-            defense -= this.enemy.getAttack();
+            def -= this.enemy.getAttack();
         }
         return ret;
     }
 
     private int attackEnemy() {
-        int defense = this.enemy.getDefense();
+        int def= this.enemy.getDefense();
         int ret = 0;
-        while (defense > 0) {
-            if (this.hero.getAttack() > defense) {
-                ret = (defense > 0) ? (this.hero.getAttack() - defense) : this.hero.getAttack();
+        while (def > 0) {
+            if (this.hero.getAttack() > def) {
+                ret = (def > 0) ? (this.hero.getAttack() - def) : this.hero.getAttack();
                 break;
             }
-            defense -= this.hero.getAttack();
+            def -= this.hero.getAttack();
         }
         return ret;
     }

@@ -9,27 +9,6 @@ import com.lmucassi.app.view.CliView;
 import com.lmucassi.app.view.GuiView;
 
 public class Swingy {
-    public static void guiMode() {
-        Hero hero = new Hero();
-        GuiView swingGUIView = new GuiView();
-        GuiController guiController = new GuiController(hero, swingGUIView);
-
-        guiController.startGame();
-    }
-
-    public static void cliMode() {
-        CliView swingTextView = new CliView();
-        Hero hero = new Hero();
-        Game gamePlay = new Game(swingTextView, hero);
-
-        CliController textModeController = new CliController(swingTextView, gamePlay);
-        try {
-            textModeController.playGame();
-        } catch (ErrException err) {
-            System.out.println(err.getMessage());
-        }
-    }
-
     public static void main(String[] args) {
         try {
             if (args[0].equals("console"))
@@ -45,6 +24,28 @@ public class Swingy {
         } catch (ArrayIndexOutOfBoundsException ex) {
             System.out.println("\t \033[31;1mInvalid Input [ Command Not Found ] \033[0m");
             System.out.println("\t \033[31;1mUsage: $java -jar swingy.jar [ console | gui ]\n\t[ Choose between console and gui ] \033[0m");
+        }
+    }
+
+    public static void guiMode() {
+        Hero hero = new Hero();
+        GuiView guiView = new GuiView();
+        GuiController guiController = new GuiController(hero, guiView);
+
+        guiController.startGame();
+    }
+
+    public static void cliMode() {
+        CliView cliView = new CliView();
+        Hero hero = new Hero();
+        Game gamePlay = new Game(cliView, hero);
+
+        CliController cliController = new CliController(cliView, gamePlay);
+        try {
+            cliController.playGame();
+        } catch (ErrException err) {
+            System.out.println(err.getMessage());
+            System.out.println("\t \033[31;1mError: playGame() [ Coildn't play game ] \033[0m");
         }
     }
 }

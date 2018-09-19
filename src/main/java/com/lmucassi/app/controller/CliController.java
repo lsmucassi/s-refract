@@ -18,20 +18,6 @@ public class CliController {
         this.gameMove = gameMove;
     }
 
-    private void updateHero() throws ErrException {
-        this.hero.prevDir = consoleView.movePlayer();
-        if (this.hero.prevDir == 1)
-            this.hero.setY(this.hero.getY() - 1);
-        else if (this.hero.prevDir == 2)
-            this.hero.setX(this.hero.getX() + 1);
-        else if (this.hero.prevDir == 3)
-            this.hero.setX(this.hero.getX() - 1);
-        else if (this.hero.prevDir == 4)
-            this.hero.setY(this.hero.getY() + 1);
-        else if (this.hero.prevDir == 5)
-            gameMove.exitGame();
-    }
-
     public void playGame() throws ErrException {
         consoleView.startGame();
         Enemy enemy = null;
@@ -53,7 +39,7 @@ public class CliController {
                         if (this.hero.getHitPoints() > 0) {
                             if (enemy != null)
                                 enemies.remove(enemy);
-                            if (heroStats._levelUp) {
+                            if (heroStats._moveLevel) {
                                 gameMove.artifacts();
                                 continue START;
                             }
@@ -72,4 +58,19 @@ public class CliController {
                 break;
         }
     }
+
+    private void updateHero() throws ErrException {
+        this.hero.prevDir = consoleView.movePlayer();
+        if (this.hero.prevDir == 1)
+            this.hero.setY(this.hero.getY() - 1);
+        else if (this.hero.prevDir == 2)
+            this.hero.setX(this.hero.getX() + 1);
+        else if (this.hero.prevDir == 3)
+            this.hero.setX(this.hero.getX() - 1);
+        else if (this.hero.prevDir == 4)
+            this.hero.setY(this.hero.getY() + 1);
+        else if (this.hero.prevDir == 5)
+            gameMove.exitGame();
+    }
+
 }
