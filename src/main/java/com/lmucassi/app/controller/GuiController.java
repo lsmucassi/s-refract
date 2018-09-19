@@ -37,8 +37,8 @@ public class GuiController implements ActionListener {
 
     private void selectHero() throws ErrException {
         this.hero = this.gamePlay.getHeroes_().get(swingGUIView.getHeroList().getSelectedIndex());
-        this.hero.setDefense(this.swingTextView.getDefense(this.hero.getArmor()));
-        this.hero.setAttack(this.swingTextView.getAttack(this.hero.getWeapon()));
+        this.hero.setDefense(this.swingTextView.getDef(this.hero.getArmor()));
+        this.hero.setAttack(this.swingTextView.getAtt(this.hero.getWeapon()));
         this.hero.setHitPoints(100);
         gamePlay.setGameInPlay(true);
         this.hero = gamePlay.initGame();

@@ -36,10 +36,15 @@ public class Swingy {
                 cliMode();
             else if (args[0].equals("gui"))
                 guiMode();
-            else
+            else if (args.length == 0)
+                System.out.println("\t \033[31;1mUsage: $java -jar swingy.jar [ console | gui ]\n[ Choose between console and gui ] \033[0m");
+            else {
                 System.out.println("\t \033[31;1mInvalid option [ Choose between console and gui ] \033[0m");
+                System.out.println("\t \033[31;1mUsage: $java -jar swingy.jar [ console | gui ]\n\t[ Choose between console and gui ] \033[0m");
+            }
         } catch (ArrayIndexOutOfBoundsException ex) {
             System.out.println("\t \033[31;1mInvalid Input [ Command Not Found ] \033[0m");
+            System.out.println("\t \033[31;1mUsage: $java -jar swingy.jar [ console | gui ]\n\t[ Choose between console and gui ] \033[0m");
         }
     }
 }

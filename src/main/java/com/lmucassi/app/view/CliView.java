@@ -54,9 +54,9 @@ public class CliView {
         return (scanner.nextLine().trim());
     }
 
-    public int getAttack(String weapon) {
+    public int getAtt(String weapon) {
         int i = 0;
-        String[] weapons = {"Short sword", "Dagger", "Falchion", "Katana", "Long Bow", "Long sword"};
+        String[] weapons = {"Short sword", "electric sword", "staff of magnus", "laser sword", "Ulfberht sword", "excalibar"};
         int[] attack = {12, 25, 32, 45, 50, 68};
         for (String w : weapons) {
             if (w.toLowerCase().equals(weapon.toLowerCase())) {
@@ -67,10 +67,10 @@ public class CliView {
         return (0);
     }
 
-    public int getDefense(String _armor) {
+    public int getDef(String _armor) {
         int i = 0;
-        String[] armor = {"Mining armor", "Steel armor", "Rich Mahogany armor", "Ebonwood armor"
-                , "Shadewood armor", "Leather armor"};
+        String[] armor = {"electric armor", "invisible gown", "metal shield", "Ebonwood armor"
+                , "strong armor", "Leather armor"};
         int[] defense = {63, 57, 42, 35, 22, 10};
 
         for (String a : armor) {
@@ -82,10 +82,10 @@ public class CliView {
         return (0);
     }
 
-    public void displayDetails(Hero hero) {
+    public void heroStats(Hero hero) {
         startSc();
         System.out.println("\033[32m $ Name: ".concat(hero.getName()));
-        System.out.println("\033[32m $ Class: ".concat(hero.getHeroClass()));
+        System.out.println("\033[32m $ Class: The ".concat(hero.getHeroClass()));
         System.out.println("\033[32m $ Level: ".concat(Integer.toString(hero.getLevel())));
         System.out.println("\033[32m $ Experience: ".concat(Integer.toString(hero.getExp()).concat(" XP")));
         System.out.println("\033[32m $ Attack: ".concat(Integer.toString(hero.getAttack())));
@@ -99,10 +99,11 @@ public class CliView {
 
     public ArrayList<String> battleWon(int level) {
         ArrayList<String> artifacts = new ArrayList<>();
-        String[] armor = {"Leather armor", "Ebonwood armor", "Rich Mahogany armor"
-                , "Shadewood armor", "Mining armor", "Steel armor"};
-        String[] weapons = {"Dagger", "Short sword", "Falchion", "Katana"
-                , "Long Bow", "Long sword"};
+        String[] armor = {"Short sword", "electric sword", "staff of magnus", "laser sword",
+                "Ulfberht sword", "excalibar"};
+
+        String[] weapons = {"electric armor", "invisible gown", "metal shield", "Ebonwood armor",
+                "strong armor", "Leather armor"};
 
         System.out.println("\n\n\033[32m!YOU'VE WON THE FIGHT!\nYour rewards are: \033[0m"
                 .concat(weapons[level]));
@@ -143,7 +144,6 @@ public class CliView {
         Enemy e;
         System.out.print(" \033[34mLife: \033[0m".concat(Integer.toString(hero.getHitPoints()).concat("\t\t")));
         System.out.println(" \033[34mLevel: \033[0m".concat(Integer.toString(hero.getLevel())));
-        System.out.println(" \033[34mLevel: \033[0m".concat(Integer.toString(hero.getExp())));
         for (int y = 0; y < mapSize; y++) {
             for (int x = 0; x < mapSize; x++) {
                 e = getEnemy(x, y, enemies);
@@ -156,6 +156,7 @@ public class CliView {
             }
             System.out.println();
         }
+        System.out.println(" \033[34mXP: \033[0m".concat(Integer.toString(hero.getExp())));
     }
 
     public int movePlayer() throws ErrException {

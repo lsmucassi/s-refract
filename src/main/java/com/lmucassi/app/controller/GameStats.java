@@ -8,8 +8,8 @@ import com.lmucassi.app.view.Battle;
 public class GameStats {
     public Hero hero;
     public Enemy enemy;
-    public boolean _levelUp = false;
-    public boolean _flightSuccessful = false;
+    public boolean _moveLevel = false;
+    public boolean _runSuccess = false;
 
 
     public GameStats(Hero hero, Enemy enemy) {
@@ -18,8 +18,8 @@ public class GameStats {
     }
 
     public void playerInp() throws ErrException {
-        Battle battle = new Battle();
-        int decision = battle.battle();
+        Battle duel = new Battle();
+        int decision = duel.battle();
         if (decision == 1) {
             fight();
         } else if (decision == 2) {
@@ -40,13 +40,13 @@ public class GameStats {
         if (this.hero.getHitPoints() > 0) {
             this.hero.setExp(((int) (this.hero.getLevel() * 1000 + Math.pow(this.hero.getLevel() - 1, 2) * 450)));
             if (moveLevel() == 1)
-                this._levelUp = true;
+                this._moveLevel = true;
         }
     }
 
     private void run() {
         if (this.hero.getDefense() > this.enemy.getAttack()) {
-            this._flightSuccessful = true;
+            this._runSuccess = true;
         } else
             fight();
     }

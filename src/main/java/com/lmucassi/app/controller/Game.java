@@ -52,8 +52,8 @@ public class Game implements IModes {
                     parse = false;
                 }
                 if (!parse) throw new ErrException("\t \033[31m\nInvalid input.\033[0m");
-                hero.setAttack(consoleView.getAttack(hero.getWeapon()));
-                hero.setDefense(consoleView.getDefense(hero.getArmor()));
+                hero.setAttack(consoleView.getAtt(hero.getWeapon()));
+                hero.setDefense(consoleView.getDef(hero.getArmor()));
                 hero.setHitPoints(100);
             }
             else if (consoleView.getChoice().equals("x") || consoleView.getChoice().equals("X")) {
@@ -61,7 +61,7 @@ public class Game implements IModes {
             } else
                 throw new ErrException("\n\t\033[31mInvalid Selection. Select 1 or 2 or X / x\033[0m");
             this.gameInPlay = true;
-            consoleView.displayDetails(hero);
+            consoleView.heroStats(hero);
         }
         this.mapSz = ((hero.getLevel() - 1) * 5 + 10 - (hero.getLevel() % 2));
         hero.setX(this.mapSz / 2);
@@ -113,8 +113,8 @@ public class Game implements IModes {
         hero.setExp(500);
         hero.setWeapon("Dagger");
         hero.setArmor("Ebonwood armor");
-        hero.setAttack(consoleView.getAttack(hero.getWeapon()));
-        hero.setDefense(consoleView.getDefense(hero.getArmor()));
+        hero.setAttack(consoleView.getAtt(hero.getWeapon()));
+        hero.setDefense(consoleView.getDef(hero.getArmor()));
         hero.setHitPoints(100);
     }
 

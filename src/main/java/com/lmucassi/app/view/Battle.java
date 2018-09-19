@@ -5,7 +5,7 @@ import com.lmucassi.app.ErrException.ErrException;
 import java.util.Scanner;
 
 public class Battle {
-    private static Scanner scanner = new Scanner(System.in);
+    private static Scanner reader = new Scanner(System.in);
 
     public Battle() {
     }
@@ -21,7 +21,7 @@ public class Battle {
 
         while (cc == 1) {
             try {
-                choice = Integer.parseInt(scanner.nextLine());
+                choice = Integer.parseInt(reader.nextLine());
                 if (choice >= 1 && choice < 4)
                     cc = 0;
             } catch (NumberFormatException ex) {
