@@ -65,7 +65,7 @@ public class GameStats {
     }
 
     private int attackEnemy() {
-        int def= this.enemy.getDefense();
+        int def = this.enemy.getDefense();
         int ret = 0;
         while (def > 0) {
             if (this.hero.getAttack() > def) {
@@ -79,19 +79,19 @@ public class GameStats {
 
     public int moveLevel() {
 
-        if (this.hero.getExp() >=  1000) { //1000
+        if (this.hero.getExp() >= 1000) { //1000
             this.hero.setLevel(2);
             return (1);
         } else if (this.hero.getExp() >= 2450) { //2450
             this.hero.setLevel(3);
             return (1);
-        } else if (this.hero.getExp() >=  4800 ) { //4800
+        } else if (this.hero.getExp() >= 4800) { //4800
             this.hero.setLevel(4);
             return (1);
-        } else if (this.hero.getExp() >=  8050) { //8050
+        } else if (this.hero.getExp() >= 8050) { //8050
             this.hero.setLevel(5);
             return (1);
-        } else if (this.hero.getExp() >= 8050 ) { // 12200
+        } else if (this.hero.getExp() >= 8050) { // 12200
             this.hero.setLevel(6);
             return (1);
         } else return (0);

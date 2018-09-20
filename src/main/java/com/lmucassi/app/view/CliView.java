@@ -30,7 +30,7 @@ public class CliView {
         this.choice = scanner.nextLine();
     }
 
-    public void startSc()  {
+    public void startSc() {
         System.out.println("\n\033[32m#########################################################################\033[0m");
         System.out.println("  You are a warrior in a land of the unknown, You are faced with a lot of monsters in the Valley");
         System.out.println("  It is your duty to protect the village before this monsters attack, day and night you must keep watch and patrol");
@@ -59,9 +59,8 @@ public class CliView {
         String[] weapons = {"Short sword", "electric sword", "staff of magnus", "laser sword", "Ulfberht sword", "excalibar"};
         int[] attack = {12, 25, 32, 45, 50, 68};
         for (String w : weapons) {
-            if (w.toLowerCase().equals(weapon.toLowerCase())) {
-                return (attack[i]);
-            }
+            if (w.equalsIgnoreCase(weapon))
+                return attack[i];
             i++;
         }
         return (0);
@@ -120,13 +119,13 @@ public class CliView {
     public void gameOver(Enemy enemy, Hero hero) {
         clearScreen();
 
-        System.out.println("\t\t\033[31m#########################################################################\033[0m");
-        System.out.println("\t\t\t\t\t\t\t\033[31mGAME OVER!!!\033[0m");
-        System.out.println("\t\t\t\t\t\t\t\033[31m $ Sorry You are dead now\033[0m");
-        System.out.println("\t\t\033[31m#########################################################################\033[0m");
+        System.out.println("\033[31m#########################################################################\033[0m");
+        System.out.println("\t\t\t\t\t\033[31mGAME OVER!!!\033[0m");
+        System.out.println("\t\t\t\033[31m $ Sorry You are dead now\033[0m");
+        System.out.println("\033[31m#########################################################################\033[0m");
         System.out.println("\t\n\033[34m- Hero: \033[0m".concat(hero.getName()
                 .concat("\t\033[34m- Killed by: \033[0m").concat(enemy.getName())));
-        System.out.println("\t\033[34m- XP: \033[0m".concat(Integer.toString(hero.getExp())
+        System.out.println("\033[34m- XP: \033[0m".concat(Integer.toString(hero.getExp())
                 .concat("\t\033[34m- Level: \033[0m").concat(Integer.toString(hero.getLevel()))));
     }
 
@@ -177,8 +176,8 @@ public class CliView {
         while (cc == 1) {
             try {
                 move = Integer.parseInt(scanner.nextLine());
-             if  (move >= 1 && move <= 5)
-                 cc = 0;
+                if (move >= 1 && move <= 5)
+                    cc = 0;
 
             } catch (NumberFormatException ex) {
                 System.out.println("\n\033[32m $ Available options are: North, East, West and South or exit.\033[0m");

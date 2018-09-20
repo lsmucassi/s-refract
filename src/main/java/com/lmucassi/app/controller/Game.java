@@ -52,8 +52,8 @@ public class Game implements IModes {
                     parse = false;
                 }
                 if (!parse) throw new ErrException("\t \033[31m\nInvalid input.\033[0m");
-                hero.setAttack(consoleView.getAtt(hero.getWeapon()));
-                hero.setDefense(consoleView.getDef(hero.getArmor()));
+                hero.setAttack(consoleView.getAtt(hero.getArmor()));
+                hero.setDefense(consoleView.getDef(hero.getWeapon()));
                 hero.setHitPoints(100);
             }
             else if (consoleView.getChoice().equals("x") || consoleView.getChoice().equals("X")) {
@@ -111,8 +111,8 @@ public class Game implements IModes {
         hero.setName(consoleView.getHeroName());
         hero.setHeroClass(consoleView.getHeroClass());
         hero.setExp(500);
-        hero.setWeapon("Dagger");
-        hero.setArmor("Ebonwood armor");
+        hero.setWeapon("Short sword");
+        hero.setArmor("electric armor");
         hero.setAttack(consoleView.getAtt(hero.getWeapon()));
         hero.setDefense(consoleView.getDef(hero.getArmor()));
         hero.setHitPoints(100);

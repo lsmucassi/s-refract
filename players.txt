@@ -1,6 +1,7 @@
-Sam,Traveller,2,1000,invisible gown,Short sword
+Sam,Traveller,2,1000,Short sword,invisible gown
 Dante,Trickster,2,2450,invisible gown,staff of magnus
 X-Byte,Geek,3,4800,electric armor,laser sword
 Terry,Runner,1,510,electric armor,electric sword
 Roy,Slayer,3,4950,metal shield,Ulfberht sword
 Arthur,King,4,5870,strong armor,excalibar
+linda,hello_world,1,500,electric armor,Short sword
